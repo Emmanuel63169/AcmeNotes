@@ -32,7 +32,7 @@ app.get('/api/employees', async (req, res, next) => {
     SELECT * from employees;
     `
     const response = await client.query(SQL)
-    res.send(response.employees)
+    res.send(response.rows)
   } catch(ex) {
     next(ex)
   }

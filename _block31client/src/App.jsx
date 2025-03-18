@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     const fetchEmployees = async () => {
       setLoading(true);
-      const response = await fetch('http://localhost:3000/employees');
+      const response = await fetch('http://localhost:3000/api/employees');
       const data = await response.json();
       setEmployees(data);
       setLoading(false);
